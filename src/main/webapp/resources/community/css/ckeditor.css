@@ -1,0 +1,34 @@
+@charset "UTF-8";
+#container {
+      width: 1000px;
+      margin: 20px auto;
+            }
+.ck-editor__editable[role="textbox"] {
+      /* editing area */
+      min-height: 200px;
+      }
+.ck-content .image {
+     /* block images */
+     max-width: 80%;
+     margin: 20px auto;
+   	 }
+li{
+     list-style:none;
+   }
+main{
+   	margin-top:100px;
+   	margin-left:200px;
+   	margin-right:200px;
+   	max-wqidth:1300px;
+   	
+   }
+#button{
+	margin-top:50px;
+}
+#button>input{
+	height:20px;
+	background-color: #202020;
+	color: white; margin: auto; margin : 0 auto;
+	border: none;
+	cursor: pointer;
+}

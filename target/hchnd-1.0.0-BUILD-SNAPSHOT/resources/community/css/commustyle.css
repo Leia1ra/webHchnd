@@ -1,0 +1,219 @@
+@charset "UTF-8";
+
+	/*
+	 body{
+		 background-color: #202020;
+		 color:rgb(255, 255, 255);
+	 }
+	 */
+    /* 카테고리 탭 스타일 */
+    .sidenav {
+        height: 100%; width: 240px; position: fixed; z-index: 1;
+        top: 0; left: -170px; /* 왼쪽으로 조금 숨김 */
+        background-color: black; padding-top: 20px;
+        transition: left 0.3s; margin-top:100px;
+        border-top-right-radius: 20px;
+    }
+
+    .sidenav:hover, .sidenav.active {
+        left: 0; /* 마우스를 올리거나 활성화 상태일 때 나타남 */
+    }
+
+
+    /* 각각의 카테고리 탭 버튼 스타일 */
+    .sidenav button {
+        background-color: inherit; border: none; outline: none; cursor: pointer;
+        padding: 10px 15px; display: block; width: 100%; text-align: left;
+        transition: 0.3s; color: white;
+    }
+
+    /* 활성 탭 버튼 스타일 */
+    .sidenav button.active {
+        font-size:1.5em; color: rgb(243, 156, 18);
+    }
+
+    /* 카테고리 탭 내용 스타일 */
+    #content {
+		width:100%;
+        
+        padding: 20px;
+    }
+    
+    .tabcontent{
+		display: none;
+	}
+	#hrstyle{
+		background-color: white; width:120px; border:none; height: 0.01em; margin-left: 10px;
+	}
+	
+	/*메인 페이지 소카테고리*/
+	#category{
+		font-size:1em; color: rgb(243, 156, 18);
+	}
+	/*각 페이지의 이름*/
+	#top{
+		font-size: 2em; color:  rgb(243, 156, 18);  list-style: none;
+		display:flex; flex-basis:100%; align-items: left; margin:8px 0px;
+		margin-bottom:50px;
+	}
+	/*글자 옆에 선*/
+	#top::after{
+		content:""; flex-grow:1; margin:20px 12px; height:2px; font-size:0; line-height:0px;
+		background:darkgray;
+	}
+	/*검색창*/
+	.search-box {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+	}
+
+	#search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+	}
+
+	#search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #202020;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; float:left;
+	}	
+
+	#search-button:hover {
+    background-color: #202020;
+  
+	}
+	/*좌우정렬*/
+	.left-content {
+        float: left; width: 68%;
+    }
+
+    .right-content {
+        float: right; width: 27%; text-align: right; list-style: none; text-align: left;
+        
+        
+    }
+	/*배너*/
+	#banner {
+      color : white; background-color: rgb(26, 188, 156); margin:0 0 0 0;
+      padding-top: 10px; padding-bottom: 10px; border-color:#202020; font-size:2.5em;
+      
+   }
+	/*글쓰기 버튼*/
+	#writebutton{
+	padding: 10px 20px; font-size: 16px;
+    background-color: #202020; color: #fff;
+    border: none; border-radius: 4px; float: right; 
+	}
+	/*오.운.완 가는 버튼-현재 사용 안 하는중*/
+	#gotoday{
+		color:white; background-color: #202020; float:right;border-radius: 5px;
+	}
+	main{
+		min-width:700px;
+		max-width: 1600px;
+		margin:0 auto;
+	}
+	
+	/*li 4개씩 그룹화 및 정렬*//*
+	ul li:nth-child(odd){
+		float: left; clear: left; list-style: none; margin-right: 10px;
+	}
+	ul li:nth-child(even){
+		float: right; clear:right; list-style: none; margin-left: 10px;
+	}
+	
+	ul li:nth-child(4n-1){
+		float: left; list-style: none; margin-right: 10px;
+	}	
+	ul li:nth-child(4n){
+		float: right; list-style: none; margin-left: 10px;
+	}*/
+	
+	
+	
+	/*
+	.writelist{
+		display: flex;
+		flex-wrap: wrap;
+		gap:20px;
+	}
+	.writelist ul{
+		flex-basis: calc(50%-20px);
+		margin-bottom: 20px;
+	}
+	.writelist li{
+		list-style: none;
+	}*/
+	
+	/*글 사이 줄 긋기*/
+	
+	.writelist{
+		margin-bottom: 20px;
+	}
+	.line{
+		margin-bottom: 15px;
+		border-bottom:2px solid darkgray;
+		padding-bottom: 15px;
+		
+	}
+	.right-content>li{
+		margin-bottom:10px;
+	}
+	
+	img{
+		width: 70px;
+		height: 70px;
+	}
+	
+	/*게시글 목록 스타일*/
+ 	.writelist *{
+            list-style-type: none;
+            margin-bottom:2px;
+        }
+    #list{
+            margin: 0;
+            padding: 0;
+        }
+    .line{
+            border-bottom: 1px solid darkgray;
+        }
+    .line>div{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+     a{
+   		 color:black; 
+   		 text-decoration-line: none;
+    }
+        /*
+     .redbutton{
+		 float:left; background-color: orangered; color:white;
+		 border:none; border-radius: 1px; font-size:15px;
+	 }
+	 */
+    /*페이지 넘기는 버튼*/
+    .number{
+		list-style: none; font-size: 20px;
+		padding:0; display: flex; justify-content: center; width: 75%;
+	}
+	.number>li{
+		 padding-right:10px; padding-left:10px; border-radius: 20px;
+	}
+	
+	li{
+	list-style:none;
+	}
+	.page>li{
+	padding-right:10px; padding-left:10px; border-radius: 20px;
+	}
+	
+	

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.web.hchnd.mapper.AccountMapper">
+    <select id="emailCheck" resultType="int">
+        SELECT count(emailID) FROM user WHERE emailID=#{param1}
+    </select>
+    <select id="lastUID" resultType="String">
+        SELECT SUBSTRING(MAX(UID), 11) FROM user WHERE UID LIKE #{param1}
+    </select>
+    <insert id="temporaryAccount" parameterType="com.web.hchnd.vo.AccountVO">
+        INSERT INTO user(UID, emailID, pwd)
+        VALUES(#{UID}, #{emailID}, #{pwd})
+    </insert>
+    <!-- 메일 인증-->
+    <update id="updateAuth" parameterType="String">
+        UPDATE user SET UID=#{param1}, nickname=#{param1} WHERE UID=#{param2}
+    </update>
+    <!-- + profile record생성 -->
+    <insert id="profileRecord">
+        INSERT INTO profile(UID) VALUES (#{param1})
+    </insert>
+
+    <!-- 로그인 -->
+    <select id="loginAction" resultType="com.web.hchnd.vo.AccountVO">
+        SELECT *
+        FROM
+            user u LEFT JOIN profile p
+            ON u.UID = p.UID
+        WHERE emailID=#{param1}
+    </select>
+    <!-- 비밀번호 변경 -->
+    <update id="updatePassWord">
+        UPDATE user SET pwd=#{param1}, lastUpdate=#{param2} WHERE UID=#{param3}
+    </update>
+
+    <!-- 마이 패이지-->
+    <select id="myPageSelect" resultType="com.web.hchnd.vo.ProfileVO">
+        SELECT
+            u.UID, u.emailID, u.nickName, u.createDate,
+            p.profileImgName, p.age, p.gender, p.height, p.weight, p.skm, p.bfm
+        FROM user u LEFT JOIN profile p on u.UID = p.UID
+    </select>
+
+    <select id="duplicateNickName" resultType="int">
+        SELECT count(nickName) FROM user WHERE nickName=#{param1}
+    </select>
+
+    <update id="myPageUpdate" parameterType="com.web.hchnd.vo.ProfileVO">
+        UPDATE
+            user AS u LEFT JOIN profile AS p ON u.UID = p.UID
+        SET
+            u.nickName = #{nickName},
+            p.profileImgName = #{profileImgName},
+            p.age = #{age},
+            p.gender = #{gender},
+            p.height = #{height},
+            p.weight = #{weight},
+            p.skm = #{skm},
+            p.bfm = #{bfm}
+        WHERE u.UID = #{UID}
+    </update>
+</mapper>

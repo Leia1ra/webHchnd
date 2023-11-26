@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+body, ul, li{
+	margin:0; padding:0; list-style-type:none;
+}
+
+/* link초기화 */
+a:link, a:visited, a:hover, a:active{
+	color:black;
+	text-decoration:none;
+}
+
+/*header*/
+header>div{
+	height:100px;
+	width:1000px;
+	line-height:100px;
+	font-size:50px;
+	background-color:#EBE5D9;
+	color:#577D86;
+	text-align:center;
+	margin:0 auto;
+	
+}
+
+/*header 메뉴*/
+.topMenu{
+	height:40px;
+	background-color:#002B5B;
+}
+.topMenu>ul{
+	height:40px;
+	margin:0 auto;
+	width:1000px;
+}
+.topMenu li{
+	float:left;
+	padding:0px 20px;
+	height:40px;
+	line-height:40px;
+}
+.topMenu a:link, .topMenu a:visited{
+	color:#fff	
+}
+.topMenu a:hover{
+	color:yellow;
+}
+/* footer */
+footer{
+	height:80px;
+	line-height:80px;
+	text-align:center;
+	background-color:#ddd;
+	margin:10px 0px;
+}

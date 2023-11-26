@@ -1,0 +1,66 @@
+@charset "EUC-KR";
+#ox{
+	display:flex;
+	flex-wrap:wrap;
+}
+.bodyKingLayout{
+	border : 1px solid #202020;
+	max-width:300px;
+	position:relative;
+	margin:25px;
+	border-radius:5px;
+}
+.bodyKingLayout>img{
+	width:300px; height:300px;
+	pading:10px;
+	border-bottom : 1px solid #202020;
+	border-radius:5px;
+}
+.bodyKingLayout>li{
+	margin-top:10px;
+	margin-bottom:5px;	
+	margin-left:10px;
+}
+.attribute{
+	display:flex;
+	/*justify-content: space-between;*/
+	margin-left:10px;
+	margin-right:10px;
+	margin-bottom:10px;
+}
+
+/*벽돌형식
+#columns{
+        column-width:250px;
+        column-gap: 15px;
+        
+      }
+      #columns figure{
+        display: inline-block;
+        border:1px solid #202020;
+        /*
+        border-left:1px solid lightgray;
+        border-top:1px solid lightgray;
+        border-right:1px solid #202020;
+        border-bottom:1px solid #202020;*/
+        margin:0;
+        margin-bottom: 15px;
+        padding:10px;
+       /* box-shadow: 3px 3px 3px #202020;*/
+        /*border-radius:10px;*/
+      }
+      #columns figure img{
+        width:100%;
+      }
+      #columns figure figcaption{
+        border-top:1px solid rgba(0,0,0,0.2);
+        padding:10px;
+        margin-top:11px;
+      }
+      
+#writebutton2{
+	padding: 10px 20px; font-size: 16px;
+    background-color: #202020; color: #fff;
+    border: none; border-radius: 4px;  
+    margin-bottom:30px;
+	}*/

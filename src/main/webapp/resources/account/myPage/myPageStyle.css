@@ -1,0 +1,250 @@
+body{
+    background-color: #202020;
+}
+/*마이페이지//////////////////////////////////////////////////////////////////*/
+#container{
+    color: white;
+    text-decoration: none;
+}
+#MainSection{
+    margin: 10px auto;
+    padding: 30px;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+#MainSection>h2{
+    width: 100%;
+    font-size: 2rem;
+    margin: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    color: rgb(255, 159, 41);
+
+    border-bottom: 2px solid white;
+}
+#MainSection>form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+/*Account################################################*/
+#account{
+    height: 230px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid white;
+    align-items: center;
+}
+#account input, #Gender{
+    height: 40px;
+    padding-left: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+#account>label{
+    max-width: 200px;
+    min-width: 200px;
+    height: 200px;
+    margin: 5px;
+    border: 2px solid white;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+#account>label>img{
+    min-height: 200px;
+}
+#account>label>div{
+    margin: 5px;
+    position: relative;
+    text-align: center;
+    width: 196px;
+    top: -50px;
+    background-color: black;
+    opacity: 0.5;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.5s;
+}
+#account>label>div>span{
+    height: 20px;
+}
+
+
+/*계정관련 입력*/
+#accInput{
+    margin: 5px;
+    margin-left: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /*justify-content: space-between;*/
+    /*justify-content: flex-end;*/
+
+}
+#accInput>*{
+    width: 100%;
+}
+#accInput input, #Gender{
+    text-align: center;
+}
+
+/*닉네임*/
+#nickName, #authInfo{
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    /*border: 0px;*/
+    border-radius: 10px;
+    width: 100%;
+}
+#userNickName, #email{
+    /*flex-grow: 3;*/
+    width: 75%;
+}
+#CheckBtn, #changePW{
+    /*flex-grow: 1;*/
+    width: 25%;
+    min-width: 75px;
+}
+/*유저정보*/
+#Info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#Info input:nth-child(2){
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#Info input , #Gender{
+    flex-grow: 1;
+    width: 30%;
+}
+
+
+/*inbody################################################*/
+#progress{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid white;
+}
+#progress>div{
+    width: 50%;
+}
+#progress h3{
+    color: #FF9F29;
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+/*인바디 정보*/
+#inbody{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+
+    flex-grow: 1;
+
+    align-items: center;
+    width: 100%;
+}
+#inbody>label{
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#inbody>label>span{
+    flex-grow: 1;
+    flex-basis: 30px;
+    min-width: 60px;
+}
+#inbody>label>input{
+    flex-grow: 2;
+    height: 40px;
+    padding-left: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+/*프로그램*/
+#program{
+    flex-grow: 1;
+    width: 100%;
+    padding: 5px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+#program>img{
+    margin: 5px;
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+/*저장*/
+#MainSection>form>input{
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 5px;
+    flex-grow: 1;
+    background-color: rgb(255, 159, 41);
+    color: black;
+    font-size: 1rem;
+    font-weight: 800;
+}
+/*마이페이지//////////////////////////////////////////////////////////////////*/
+@media(max-width: 800px) {
+    #account{
+        height: 400px;
+        flex-direction: column;
+    }
+    #account>label{
+        height: 200px;
+    }
+    #accInput{
+        height: 150px;
+    }
+    #progress{
+        flex-direction: column;
+        align-items: center;
+    }
+    #progress>div{
+        width: 100%;
+    }
+    #inbody{
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid white;
+    }
+}

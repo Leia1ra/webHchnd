@@ -1,0 +1,65 @@
+body{
+    background-color: #202020;
+}
+/*회원가입//////////////////////////////////////////////////////////////////*/
+#container{
+    color: white;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+#MainSection{
+    margin: 10px auto;
+    padding: 30px;
+    width: 100%;
+    max-width: 750px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#MainSection>h2{
+    width: 100%;
+    font-size: 2rem;
+    margin: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    color: rgb(255, 159, 41);
+
+    border-bottom: 2px solid white;
+}
+#MainSection>form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+/*Form태그 내부의 입력 관련한 내용*/
+#formInput{
+    margin-bottom: 10px;
+}
+#formInput>input{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+#formInput>hr{
+    margin-bottom: 20px;
+}
+
+/*비밀번호 변경 버튼*/
+#MainSection>form>input{
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 5px;
+    flex-grow: 1;
+    background-color: rgb(255, 159, 41);
+    color: black;
+    font-size: 1rem;
+    font-weight: 800;
+}
+/*회원가입//////////////////////////////////////////////////////////////////*/

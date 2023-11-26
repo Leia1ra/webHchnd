@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.web.hchnd.mapper.CertifyBoardMapper">
+    <insert id="certifyBoardWrite" parameterType="com.web.hchnd.vo.CertifyBoardVO">
+        INSERT INTO certifyBoard(UID, ip, subject, content, imageName, category)
+        VALUES(#{UID},#{ip},#{subject},#{content},#{imageName},#{category})
+    </insert>
+    <update id="certifyBoardHitCount">
+        UPDATE certifyBoard SET hit = hit + 1 WHERE no = ${param1}
+    </update>
+    <select id="certifyBoardSelect" resultType="com.web.hchnd.vo.CertifyBoardVO">
+        SELECT * FROM certifyBoard b JOIN category c ON b.category = c.keyNo
+        WHERE no=#{param1} AND category=#{param2};
+    </select>
+    <select id="findWriterName" resultType="com.web.hchnd.vo.AccountVO">
+        SELECT nickname, profileImgName FROM user u JOIN profile p ON u.UID = p.UID WHERE u.UID=#{param1}
+    </select>
+
+    <!--좋아요-->
+    <select id="countHeart" resultType="int">
+        SELECT COUNT(UID) FROM heart WHERE articleNo=#{param1} AND keyNo=#{param2}
+    </select>
+    <select id="heartState" resultType="int">
+        SELECT COUNT(UID) FROM heart WHERE UID=#{UID} AND articleNo=#{articleNo} AND keyNo=#{keyNo}
+    </select>
+    <insert id="heartInsert">
+        INSERT INTO heart(articleNo, UID, keyNo)
+        VALUES(#{articleNo},#{UID},#{keyNo})
+    </insert>
+    <delete id="heartDelete">
+        DELETE FROM heart
+        WHERE
+            articleNo=#{articleNo}
+            AND UID=#{UID}
+            AND keyNo=#{keyNo}
+    </delete>
+
+    <delete id="certifyBoardDelete">
+        DELETE FROM certifyBoard WHERE no=#{param1} AND category=#{param2}
+    </delete>
+    <update id="certifyBoardEdit" parameterType="com.web.hchnd.vo.CertifyBoardVO">
+        UPDATE certifyBoard
+        SET
+            category=#{category},
+            imageName=#{imageName},
+            subject=#{subject},
+            content=#{content}
+        WHERE no=#{no} AND category=#{beforeCategory}
+    </update>
+</mapper>

@@ -1,0 +1,137 @@
+#banner {
+      color : white; background-color: rgb(26, 188, 156); margin:0 0 0 0;
+      padding-top: 45px; padding-bottom: 10px; border-color:#202020; font-size:2.5em;
+}
+
+li{
+	list-style: none; margin-bottom:7px;
+}
+
+.left-content {
+        float: left; width: 70%; 
+}
+
+.right-content {
+        float: right; width: 20%; list-style: none; text-align: left;
+         margin-top:100px; width:300px;
+    	 background-color: rgb(242, 242, 242); padding:30px 30px 30px 30px; color:black;
+    	 max-width:250px;
+    	
+}
+
+main{
+		min-width:700px;
+		max-width: 1400px;
+		margin:0 auto;
+	}
+	
+.post-titleContents{
+	align-items: center;
+}
+
+.post-titleContents>img{
+	display: block; margin: 0 auto;
+}
+
+/*각 페이지의 이름*/
+	#top{
+		font-size: 1.5em; color:  rgb(243, 156, 18);  list-style: none;
+		display:flex; flex-basis:100%; align-items: left; margin:8px 0px;
+		margin-bottom:50px;
+	}
+	/*글자 옆에 선*/
+	#top::after{
+		content:""; flex-grow:1; margin:20px 12px; height:2px; font-size:0; line-height:0px;
+		background:darkgray;
+	}
+	
+	
+	.container {
+	    display: flex;
+	     /* 박스와 버튼을 감싸는 배경색 */
+		padding: 20px; /* 감싸는 박스와 버튼의 안쪽 여백 */
+		margin-bottom:50px; margin-top: 0;
+	     }
+	     
+	#container {
+	    min-height: calc(100% - 50px);
+	    width: 100%;
+	}
+	
+	
+	.post-box {
+		padding: 10px; /* 글을 쓰는 박스 안쪽 여백 */
+		
+		}
+	.post-box>textarea{
+		padding:5px;
+		resize: none;
+	}
+	.comment-button {
+		width:150px; height:100px;
+		background-color: rgb(243, 156, 18); /* 댓글 등록 버튼 배경색 */	
+		color: white; margin: auto; margin : 0 auto;
+		border: none; font-size: 1em;
+		padding: 10px 20px; border-radius: 5px;
+		cursor: pointer; margin-top:7px;
+		align-items: center;	
+		position:absolute;		
+		margin-left:30px;		
+		}
+		
+	.comment{
+		margin-top:50px;
+		margin-bottom:100px; 
+	}
+
+	.back{
+		background-color: coral; cursor: pointer;
+		width: 90px; height: 50px; border:none;
+		font-size:1em; color:white; margin-left:30px;
+	}
+	.title{
+	font-size:1.5em;
+	text-align: left; 
+	margin-bottom:50px; 
+	font-weight: bold;
+	
+	}
+	.content{
+		margin-left:30px;
+		border-bottom: 2px solid darkgray;
+		bargin-bottom:70px;	
+	}
+	.reply{
+		padding-bottom:20px;
+		text-align: left; 
+		margin-bottom:30px; 
+		border-bottom: 1px solid darkgray;
+	}
+	.information{
+		text-align: center; 
+		margin-top: 10px; 
+		display: flex;  
+		justify-content: left; 
+		margin-bottom: 20px; 
+		margin-left:60px;
+	}
+	.writer{
+		justify-content: left; 
+		margin-left:60px;
+	}
+	img{
+		width: 70px;
+		height: 70px;
+	}
+	.contentedit{
+	padding-left:50px;
+	
+	
+	}
+	.contentedit>a{
+		text-decoration:none;
+		color:black;
+		padding-right:10px;
+		
+	}
+	

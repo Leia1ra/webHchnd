@@ -1,0 +1,11 @@
+@charset "EUC-KR";
+
+/* main content */
+main{
+	width:1000px;
+	margin:0 auto;
+}
+
+main>.h{
+	width:50%; height:400px;
+}

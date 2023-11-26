@@ -1,0 +1,151 @@
+#container{
+    text-decoration: none;
+
+    align-items: center;
+    justify-content: flex-start;
+    padding: 30px;
+}
+
+/*인증형 게시판*/
+#MainHeader{
+    max-width: 1250px;
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+#MainHeader>h2{
+    width: fit-content;
+    margin: 10px;
+    font-size: 2rem;
+    color: #FF9F29;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: content;
+}
+#MainHeader>span{
+    width: 100%;
+    height: 0;
+    border: 1px solid #FF9F29;
+    flex-grow: 1;
+}
+
+
+
+#mainArticle{
+    max-width: 1250px;
+    width: 100%;
+    flex-grow: 1;
+    flex-basis: 100%;
+    margin: 10px;
+
+    display: flex;
+    flex-direction: column;
+}
+#writeForm{
+    width: 100%;
+    flex-grow: 1;
+    flex-basis: 100%;
+
+    margin: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /*align-items: stretch;*/
+}
+
+
+
+/*왼쪽*/
+#lside{
+    width: 33%;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 5px;
+    padding: 10px;
+}
+#lside>h2{
+    margin-top: 0;
+    text-align: center;
+}
+#lside>img{
+    width: 100%;
+}
+
+
+/*오른쪽*/
+#rside{
+    width: 66%;
+    display: flex;
+
+    flex-direction: column;
+}
+#rside>h2{
+    margin-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid;
+}
+#rside>#viewInfo{
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#rside>#viewInfo>#heart{
+
+}
+#heart>button{
+    height: 50px;
+    width: 50px;
+    font-size: 1.5em;
+    border-radius: 25px;
+    background-color: #E9E9E9;
+    color: #FF9F29;
+    border: 1px solid white;
+    line-height: 40px;
+    transition: 0.3s;
+}
+#pimgsize{
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    margin-right: 10px;
+}
+#writerInfo{
+    /*width: 100%;
+    height: 100%;*/
+    flex-grow: 1;
+}
+#rside>#viewInfo img{
+    height: 50px;
+}
+#content{
+    flex-grow: 1;
+    border-bottom: 1px solid black;
+}
+#rside:last-child{
+    margin-top: 5px;
+}
+#certify-editable{
+    height: 40px;
+}
+#certify-editable>a{
+    display: inline-block;
+    width: 60px;
+    line-height: 40px;
+    height: 100%;
+    margin-right: 10px;
+    text-decoration: none;
+    text-align: center;
+    color:black;
+}
