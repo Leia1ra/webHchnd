@@ -41,6 +41,7 @@
             u.UID, u.emailID, u.nickName, u.createDate,
             p.profileImgName, p.age, p.gender, p.height, p.weight, p.skm, p.bfm
         FROM user u LEFT JOIN profile p on u.UID = p.UID
+        WHERE u.UID = #{param1}
     </select>
 
     <select id="duplicateNickName" resultType="int">

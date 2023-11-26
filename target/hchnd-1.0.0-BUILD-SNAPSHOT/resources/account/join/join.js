@@ -1,6 +1,5 @@
 function validationCheck(context){
     let Error = document.getElementById("Error");
-    document.getElementsByClassName()
     let userid = document.getElementById("Id");
     let Email_reg = /^\w{4,14}[@][a-z]{2,8}[.][a-z]{2,3}([.][a-z]{2,3})?$/;
     let UserPw = document.getElementById("Pw");
